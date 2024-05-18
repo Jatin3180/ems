@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -58,7 +59,7 @@ public class EmployeeController {
 		}
 	 }
 	
-	  @PostMapping(value =  UPDATE_EMPLOYEE, consumes = MediaType.APPLICATION_JSON_VALUE,
+	  @PutMapping(value =  UPDATE_EMPLOYEE, consumes = MediaType.APPLICATION_JSON_VALUE,
 			produces = MediaType.APPLICATION_JSON_VALUE)
 			public ResponseEntity<employee> UpdateEmployee(@RequestBody employee employeeobject
 					,@RequestParam int emp_id)throws Exception
